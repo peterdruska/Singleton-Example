@@ -12,7 +12,7 @@ class SecondViewController: UIViewController {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
-    let networkManager = NetworkManager()
+    let networkManager = NetworkManager.sharedManager
     
     override func viewDidLoad() {
         super.viewDidLoad()

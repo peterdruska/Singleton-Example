@@ -6,8 +6,11 @@
 //  Copyright © 2016 Bedots.eu. All rights reserved.
 //
 
-class NetworkManager {
+import UIKit
+
+public class NetworkManager {
     static let sharedManager = NetworkManager()
+    private init() {}
     
     func getTitle(forTab tab: Int) -> String {
         switch tab {
