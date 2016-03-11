@@ -8,7 +8,6 @@
 
 class NetworkManager {
     static let sharedManager = NetworkManager()
-//    private init() {}
     
     func getTitle(forTab tab: Int) -> String {
         switch tab {
