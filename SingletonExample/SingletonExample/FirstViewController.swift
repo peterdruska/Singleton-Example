@@ -10,9 +10,15 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    let networkManager = NetworkManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        titleLabel.text = networkManager.getTitle(forTab: 0)
+        subtitleLabel.text = networkManager.getSubtitle(forTab: 0)
     }
 
     override func didReceiveMemoryWarning() {

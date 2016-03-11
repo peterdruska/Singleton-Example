@@ -10,9 +10,15 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    let networkManager = NetworkManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        titleLabel.text = networkManager.getTitle(forTab: 1)
+        subtitleLabel.text = networkManager.getSubtitle(forTab: 1)
     }
 
     override func didReceiveMemoryWarning() {
